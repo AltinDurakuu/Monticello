@@ -83,7 +83,7 @@ main{
         &_title{
             text-align: center
         }
-        h2{
+        &_title h2{
             @include style-h2;
             @include font-size-height(44px, 53.64px);
             margin-bottom: 150px;
@@ -127,7 +127,6 @@ main{
             h4{
                 @include style-h4;
                 @include font-size-height(22px, 26.82px);
-                margin-bottom: 19px;
             }
             h2{
                 @include style-h2;
@@ -138,6 +137,7 @@ main{
                 color: $primary-color;
                 @include font-size-height(18px, 30px);
                 margin-bottom: 41px;
+                font-family: $open-sans;
             }
             a{
                 @include do-btn;
@@ -167,6 +167,7 @@ main{
                     left: 260px;        
                 }
             }
+           
         }
     }
 }
