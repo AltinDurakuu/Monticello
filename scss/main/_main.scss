@@ -80,6 +80,7 @@ main{
 
     .about-us{
         margin-top: 100px;
+        overflow-x: hidden;
         &_title{
             text-align: center
         }
@@ -169,5 +170,103 @@ main{
             }
            
         }
+    }
+
+
+    .projects{
+        margin-bottom: 100px;
+        padding-bottom: 20px;
+        background: url(../../assets/projects-bg.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 1035px;
+        h2{
+            color: $white;
+            text-align: center;
+            position: relative;
+            @include font-size-height(44px, 54px);
+            &::before{
+                content: '';
+                display: block;
+                width: 100px;
+                background: $white;
+                height: 1px;
+                position: absolute;
+                top: -30px;
+                left: calc(50% - 50px);
+            }
+        }
+        .pojects-slider-container{
+            display: flex;
+            justify-content: space-between;
+            .slick-slide {
+                margin-left:30px;
+              }
+            .slick-list {
+                margin-left:-30px;
+              }
+              .slick-dots{
+                list-style-type: none;
+                display: flex;
+                position: absolute;
+                top: calc(100% + 60px);
+                left: calc(50% - 105px);
+                button{
+                    box-sizing: border-box;
+                    display: block;
+                    width: 10px;
+                    height: 14px;
+                    border-radius: 50%;
+                    border: 1px solid #fff;
+                    text-indent: -2122131px;
+                    background: transparent;
+                    margin-right: 40px;
+                }
+                .slick-active button{
+                    background: #fff  !important;
+                }
+            }
+            .article{
+                width: 370px;
+                height: 540px;
+                background: $white;
+                &-info{
+                    padding: 0 20px;
+                    h4{
+                        @include style-h4;
+                        @include font-size-height(22px, 26.82px);
+                        font-weight: bold; 
+                        margin-top: 30px;
+                        margin-bottom: 15px;
+                    }
+                    p{
+                        color: $primary-color;
+                        @include font-size-height(18px, 30px);
+                        font-family: $open-sans;
+                        margin-bottom: 39px;
+                    }
+                    &-creator-info{
+                        display: flex;
+                        align-items: center;
+                        color: $primary-color;
+                        img{
+                            border-radius: 50%;
+                            margin-right: 20px;
+                        }
+                        h5{
+                            @include font-size-height(18px, 21.94px);
+                            margin-bottom: 6px;
+                        }
+                        span{
+                            color: #55B7FF;
+                            @include font-size-height(14px, 17.07px);
+                        }
+                    }
+                }
+            }
+
+        }
+        
     }
 }
