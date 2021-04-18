@@ -2,16 +2,18 @@
 main{
     .hero{
         color: $white;
+        margin-bottom: 130px;
+        background-image: url('../../assets/hero-bg2.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 800px;
+        position: relative;
         &-slides-container{
             .hero-slide{
-                background-image: url('../../assets/hero-bg2.png');
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                height: 800px;
-                position: relative;
                 z-index: -15;
                 display: flex;
+                height: 800px;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -49,6 +51,13 @@ main{
                         margin-top: 240px;
                         position: absolute;
                         bottom: 50px;
+                        transition: all 0.3 ease-in-out;
+                        &:hover{
+                            transform: scale(1.05);
+                            img{
+                                transform: scale(1.05);
+                            }
+                        }
                         img{
                             width: 10px;
                             height: 17px;
@@ -71,6 +80,11 @@ main{
                 text-indent: -2122131px;
                 background: transparent;
                 margin-bottom: 40px;
+                cursor: pointer;
+                transition: all .4s ease-in-out;
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.6);
+                }
             }
             .slick-active button{
                 background: #fff  !important;
@@ -79,32 +93,16 @@ main{
     }
 
     .about-us{
-        margin-top: 100px;
-        overflow-x: hidden;
-        &_title{
-            text-align: center
-        }
-        &_title h2{
-            @include style-h2;
-            @include font-size-height(44px, 53.64px);
-            margin-bottom: 150px;
-            position: relative;
-            &::before{
-                content: '';
-                display: block;
-                width: 100px;
-                background: $primary-color;
-                height: 1px;
-                position: absolute;
-                top: -30px;
-                left: calc(50% - 50px);
-            }
+        .about-us__title h2{
+            @include style-section-title;       
+            margin-bottom: 120px;
         }
         .flex-container{
             display: flex;
             justify-content: flex-start;
             align-items: center;
             margin-bottom: 200px;
+            height: 527px;
         }
         &_img{
             margin-right: 70px;
@@ -113,7 +111,7 @@ main{
             position: relative;
             &:before{
                 content: '';
-                width: 100%;
+                width: 80%;
                 height: 100%;
                 background:  #55B7FF;
                 display: block;
@@ -164,7 +162,7 @@ main{
             .about-us_img{
                 margin-left: 70px;
                 &:before{
-                    background:  #55B7FF; 
+                    background:  #7E5AFF; 
                     left: 260px;        
                 }
             }
@@ -174,7 +172,8 @@ main{
 
 
     .projects{
-        margin-bottom: 100px;
+        margin-bottom: 170px;
+        padding-top: 120px;
         padding-bottom: 20px;
         background: url(../../assets/projects-bg.png);
         background-position: center;
@@ -183,18 +182,10 @@ main{
         height: 1035px;
         h2{
             color: $white;
-            text-align: center;
-            position: relative;
-            @include font-size-height(44px, 54px);
-            &::before{
-                content: '';
-                display: block;
-                width: 100px;
-                background: $white;
-                height: 1px;
-                position: absolute;
-                top: -30px;
-                left: calc(50% - 50px);
+            margin-bottom: 89px;
+            @include style-section-title;
+            &:before{
+                background: #fff;
             }
         }
         .pojects-slider-container{
@@ -229,7 +220,7 @@ main{
             }
             .article{
                 width: 370px;
-                height: 540px;
+                height: 520px;
                 background: $white;
                 &-info{
                     padding: 0 20px;
@@ -268,5 +259,35 @@ main{
 
         }
         
+    }
+    .gallery{
+        margin-bottom: 140px;
+        h2{
+            @include style-section-title;
+            margin-bottom: 89px;
+        }
+
+        &-grid-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            grid-template-areas:
+              "left-side img1 img2"
+              "left-side img3 img4";
+          }
+          .left-side { grid-area: left-side; }
+          .img1 { grid-area: img1; }
+          .img2 { grid-area: img2; }
+          .img3 { grid-area: img3; }
+          .img4 { grid-area: img4; }
+          &-btn-container{
+             display: flex;
+             justify-content: center;
+              a{
+                @include do-btn;
+                margin-top: 60px;
+            }
+          }
     }
 }

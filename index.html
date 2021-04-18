@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
   <link rel="stylesheet" href="dist/css/app.css">
   <title></title>
 </head>
@@ -43,7 +44,7 @@
                 <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
               </div>
             </div>
-            <a href=""><img src="assets/go-down.svg" alt="go-down"></a>
+            <a href="#projects"><img src="assets/go-down.svg" alt="go-down"></a>
           </div>
           <div class="hero-slide">
             <div class="hero-slide-content">
@@ -85,9 +86,10 @@
     </section>
     <section id="aboutus" class="about-us full-block">
       <div class="container">
-        <div class="about-us_title">
-          <h2>WHAT WE DO</h2>
-        </div>
+        
+          <div class="about-us__title">
+            <h2>WHAT WE DO</h2>
+          </div>
         <div class="flex-container">
           <div class="about-us_img">
             <img src="assets/about-us-img1.png" alt="about-us-img1">
@@ -123,7 +125,7 @@
       </div>
     </section>
 
-    <section id="projects" class="projects full-block">
+    <section id="news" class="projects full-block">
       <div class="container">
         <h2>Latest News</h2>
 
@@ -200,12 +202,55 @@
           </article>
         </div>
       </div>
-    </section>  
+    </section> 
+
+    <section id="projects" class="gallery full-block">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid-container">
+          <div class="left-side"><img src="assets/gallery1.png" alt=""></div>
+                
+          <div class="img1"><img src="assets/gallery2.png" alt=""></div>
+          <div class="img2"><img src="assets/gallery3.png" alt=""></div>
+          <div class="img3"><img src="assets/gallery4.png" alt=""></div>
+          <div class="img4"><img src="assets/gallery5.png" alt=""></div>
+        </div>
+      </div>
+      <div class="gallery-btn-container"><a href="#">SEE MORE</a></div>
+    </section>
   </main>
+
+  <footer id="contact" class="full-block footer">
+    <section class="map-section full-block">
+      <div id="map"></div>
+    </section>
+    <div class="form-container full-block">
+      <form action="#">
+        <div class="form__title">
+          <h2>Get in Touch</h2>
+        </div>
+        <div class="flex-container">
+          <div class="left-side-info">
+            <p><i class="fas fa-map-marker-alt"></i>91 Nolan Extensions Suite 670</p>
+            <p><i class="fas fa-phone-alt"></i>+001 356-868-2454</p>
+            <p><i class="fas fa-inbox"></i>montichello@service.com</p>
+            <p><i class="far fa-clock"></i>From 07:05AM to 19:30PM</p>
+          </div>
+          <div class="right-side-inputs">
+            <input type="text">
+            <input type="email" name="" id="">
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+      </form>
+    </div>
+  </footer>
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs6kz4vjgFFQ9Wj84dcAiDBQXZmRynDFg&callback=initMap" type="text/javascript"></script>
+
 </body>
 
 </html>

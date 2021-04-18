@@ -1,1 +1,59 @@
 //silence-is-golden
+footer{
+    background: blue;
+    #map{
+        width: 100%;
+        height: 700px;   
+    }
+    form{
+        width: 770px;
+        padding: 0 60px;
+        height: 450px;
+        top: -300px;
+        margin:0 auto;
+        padding-top: 90px;
+        position: relative;
+        background: #fff;
+        color: $primary-color;
+        .flex-container{
+            display: flex;
+        }
+        .right-side-inputs{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 30px;
+        }
+        input{
+            border: none;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            font-size: 18px;
+            border-bottom: 2px solid rgba($color: #000000, $alpha: 0.50);
+            &:focus{
+                outline: none;
+                border-bottom: 2px solid rgba($color: #000000, $alpha: 1);
+            }
+            &[type="submit"]{
+                @include do-btn;
+                background: transparent;
+                line-height: 1em;
+                cursor: pointer;
+            }
+        }
+        i{
+            color: #7E5AFF;
+            margin-right: 8px;
+        }
+        p {
+            margin-bottom: 40px;
+        }
+        .form__title{
+            h2{
+            position: relative;
+            @include style-section-title;
+            margin-bottom: 20px;
+             }
+        }
+    }
+}
