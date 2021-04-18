@@ -77,4 +77,96 @@ main{
             }
         }
     }
+
+    .about-us{
+        margin-top: 100px;
+        &_title{
+            text-align: center
+        }
+        h2{
+            @include style-h2;
+            @include font-size-height(44px, 53.64px);
+            margin-bottom: 150px;
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                width: 100px;
+                background: $primary-color;
+                height: 1px;
+                position: absolute;
+                top: -30px;
+                left: calc(50% - 50px);
+            }
+        }
+        .flex-container{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 200px;
+        }
+        &_img{
+            margin-right: 70px;
+            width: 630px;
+           // height: 955px;
+            position: relative;
+            &:before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background:  #55B7FF;
+                display: block;
+                position: absolute;
+                top:-60px;
+                left: -260px;
+                z-index: -2;
+            }
+        }
+        &-content{
+            width: 470px;
+            h4{
+                @include style-h4;
+                @include font-size-height(22px, 26.82px);
+                margin-bottom: 19px;
+            }
+            h2{
+                @include style-h2;
+                @include font-size-height(44px, 53.64px);
+                margin-bottom: 19px;
+            }
+            p{
+                color: $primary-color;
+                @include font-size-height(18px, 30px);
+                margin-bottom: 41px;
+            }
+            a{
+                @include do-btn;
+            }
+            .address{
+                clear: both;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                top: 60px;
+                p{
+                    font-style: italic;
+                    @include font-size-height(15px, 20px);
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .flex-container:last-child{
+            flex-direction: row-reverse;
+            .about-us_img{
+                margin-left: 70px;
+                &:before{
+                    background:  #55B7FF; 
+                    left: 260px;        
+                }
+            }
+        }
+    }
 }

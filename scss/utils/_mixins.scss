@@ -4,3 +4,30 @@
     line-height: $line-height+em;
     font-size: $font-size;
 }
+@mixin style-h4{
+    color: $primary-color;
+    font-family: $montserrat;
+}
+@mixin style-h2{
+    color: $primary-color;
+    font-family: $montserrat;
+    font-weight: 700;
+}
+@mixin do-btn{
+    float: left;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    color: $primary-color;
+    transition: all .3s ease-in-out;
+    text-align: center;
+    border: 1px solid $primary-color;
+    &:hover{
+        background: $primary-color;
+        color: $white;
+        transform: scale(1.03);
+    }
+    &:active{
+        transform: scale(0.97);
+    }
+}
