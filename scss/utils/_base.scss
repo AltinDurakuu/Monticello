@@ -1,1 +1,25 @@
 //silence-is-golden
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: $montserrat;
+}
+svg,img{
+    max-width: 100%;
+    height: auto;
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.full-block{
+    float: left;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    float: left;
+}

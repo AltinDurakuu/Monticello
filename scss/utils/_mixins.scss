@@ -1,1 +1,6 @@
 //silence-is-golden
+@mixin font-size-height($font-size, $line-height-px){
+    $line-height: ($line-height-px / $font-size);
+    line-height: $line-height+em;
+    font-size: $font-size;
+}
